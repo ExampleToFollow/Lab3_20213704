@@ -37,7 +37,6 @@
             android:theme="@style/Base.Theme.Lab3_20213704">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

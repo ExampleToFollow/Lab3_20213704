@@ -115,19 +115,14 @@ public class FinalActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.action_settings){
-            Intent intent = new Intent(FinalActivity.this,MainActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        if (item.getItemId()==android.R.id.home){
-            //Para regresar al activity anterior borramos el actual de la pila
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void volverInicioSesion(MenuItem item ){
+        Intent intent = new Intent(FinalActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.timer_menu, menu);
+        return true;
     }
 
 }
