@@ -25,6 +25,7 @@ import android.os.CountDownTimer;
 
 
 import com.example.lab3_20213704.ConsumoWebServices.Interfaces.AuthUsuario;
+import com.example.lab3_20213704.ConsumoWebServices.Interfaces.AuxiliarTarea;
 import com.example.lab3_20213704.ConsumoWebServices.Interfaces.ListaUsuarios;
 import com.example.lab3_20213704.ConsumoWebServices.Interfaces.Usuario;
 import com.example.lab3_20213704.ConsumoWebServices.Interfaces.UsuarioService;
@@ -98,6 +99,7 @@ public class TimerActivity extends AppCompatActivity {
 
             }
         });
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -191,7 +193,7 @@ public class TimerActivity extends AppCompatActivity {
             }
         }.start();
 
-        if(lista.getTodos().size()>0){
+        if(lista.getTotal()>0){
             Intent intent = new Intent(TimerActivity.this , FinalActivity.class);
             startActivity(intent);
         }else{
@@ -216,6 +218,10 @@ public class TimerActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+    }
+
+    public void verSize(View view){
+        Log.e("Lista", "" + lista.getTotal());
     }
 
 }
