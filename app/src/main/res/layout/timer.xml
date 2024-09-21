@@ -105,8 +105,10 @@
                 android:text="25:00"/>
 
             <LinearLayout
-                android:layout_width="250sp"
-                android:layout_height="200sp">
+                android:layout_marginStart="15sp"
+                android:background="@color/md_theme_outline"
+                android:layout_width="200sp"
+                android:layout_height="50sp">
                 <ImageView
                     android:id="@+id/start_button"
                     android:layout_marginStart="85sp"
