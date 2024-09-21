@@ -48,7 +48,7 @@ public class TimerActivity extends AppCompatActivity {
     private final long startTimeBreakInMillis = 1 * 60 * 1000;
     private String idUsuario;
     private ListaUsuarios lista;
-
+private String nameSupreme ;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -68,6 +68,7 @@ public class TimerActivity extends AppCompatActivity {
         String lastName  = intent.getStringExtra("lastName");
         String email  = intent.getStringExtra("email");
         idUsuario = "" +  idUser;
+        nameSupreme= name;
         TextView nameView = findViewById(R.id.name);
         nameView.setText(firstName + " " + lastName);
         TextView emailView = findViewById(R.id.email);
@@ -99,7 +100,6 @@ public class TimerActivity extends AppCompatActivity {
 
             }
         });
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -194,8 +194,9 @@ public class TimerActivity extends AppCompatActivity {
         }.start();
 
         if(lista.getTotal()>0){
-            Intent intent = new Intent(TimerActivity.this , FinalActivity.class);
+            Intent intent = new Intent(TimerActivity.this, FinalActivity.class);
             intent.putExtra("idUser" , idUsuario);
+            intent.putExtra("name" ,nameSupreme );
             startActivity(intent);
         }else{
             mostrarDialog();

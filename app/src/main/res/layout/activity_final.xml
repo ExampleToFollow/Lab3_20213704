@@ -16,7 +16,7 @@
 
         <TextView
             android:layout_marginTop="80sp"
-            android:id="@+id/textoTareas"
+            android:id="@+id/text"
             android:layout_width="250sp"
             android:textColor="@color/black"
             android:layout_height="25sp"
@@ -34,7 +34,7 @@
         </Spinner>
 
         <Button
-            android:id="@+id/botonCambiarEstado"
+            android:id="@+id/changeState"
             android:layout_width="200sp"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"

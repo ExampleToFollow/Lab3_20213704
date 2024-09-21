@@ -2,12 +2,13 @@ package com.example.lab3_20213704.ConsumoWebServices.Interfaces;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaUsuarios {
+public class ListaUsuarios implements Serializable {
     @SerializedName("todos")
-    private ArrayList<AuxiliarTarea> todos;
+    private AuxiliarTarea[] todos;
 
     @SerializedName("total")
     private Integer total;
@@ -18,11 +19,11 @@ public class ListaUsuarios {
     @SerializedName("limit")
     private Integer limit;
 
-    public ArrayList<AuxiliarTarea> getTodos() {
+    public AuxiliarTarea[] getTodos() {
         return todos;
     }
 
-    public void setTodos(ArrayList<AuxiliarTarea> todos) {
+    public void setTodos(AuxiliarTarea[] todos) {
         this.todos = todos;
     }
 

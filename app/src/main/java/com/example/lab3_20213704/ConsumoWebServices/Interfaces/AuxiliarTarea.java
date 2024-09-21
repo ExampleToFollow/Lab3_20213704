@@ -2,14 +2,16 @@ package com.example.lab3_20213704.ConsumoWebServices.Interfaces;
 
 import com.google.gson.annotations.SerializedName;
 
-public class AuxiliarTarea {
+import java.io.Serializable;
+
+public class AuxiliarTarea implements Serializable {
 
     @SerializedName("id")
     private Integer id;
     @SerializedName("todo")
     private String todo;
     @SerializedName("completed")
-    private String completed;
+    private Boolean completed;
     @SerializedName("userId")
     private Integer userId;
 
@@ -30,11 +32,11 @@ public class AuxiliarTarea {
         this.todo = todo;
     }
 
-    public String getCompleted() {
+    public Boolean getCompleted() {
         return completed;
     }
 
-    public void setCompleted(String completed) {
+    public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
 
