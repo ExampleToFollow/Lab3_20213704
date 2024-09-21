@@ -1,6 +1,8 @@
 package com.example.lab3_20213704;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,10 @@ public class FinalActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void volverInicioSesion(MenuItem item ){
+        Intent intent = new Intent(FinalActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

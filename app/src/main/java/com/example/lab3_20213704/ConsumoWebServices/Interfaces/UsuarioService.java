@@ -6,14 +6,13 @@ import java.util.List;
 
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface UsuarioService {
 
-    @POST("/auth/login")
-    Call<RespuestaAuth> login(@Query("username") String username, @Query("password") String password);
 
-    @GET("/users")
-    Call<List<Usuario>> obtenerUsuarios();
+    @GET("/todos/user/{userId}")
+    Call<ListaUsuarios> obtenerUsuarios(@Path("userId") String userId);
 
 }

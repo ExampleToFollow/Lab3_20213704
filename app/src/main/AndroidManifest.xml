@@ -23,7 +23,8 @@
         <activity
             android:name=".FinalActivity"
             android:parentActivityName=".TimerActivity"
-            android:exported="false" />
+            android:theme="@style/AppTheme"
+            android:exported="true" />
         <activity
             android:name=".TimerActivity"
             android:exported="true"
