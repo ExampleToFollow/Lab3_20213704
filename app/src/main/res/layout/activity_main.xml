@@ -80,6 +80,7 @@
             app:startIconDrawable="@drawable/password">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
@@ -92,6 +93,7 @@
             android:id="@+id/IniciarSesion"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="wrap_content"
+            android:onClick="IniciarSesion"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="25sp"
