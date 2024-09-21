@@ -57,6 +57,7 @@
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="windowActionBar">true</item>
         <item name="title">PomodoroPUCP</item>
+
         <!-- Deshabilita la ActionBar por defecto -->
         <item name="windowNoTitle">false</item>
         <item name="colorPrimary">@color/md_theme_primary</item>
