@@ -195,6 +195,7 @@ public class TimerActivity extends AppCompatActivity {
 
         if(lista.getTotal()>0){
             Intent intent = new Intent(TimerActivity.this , FinalActivity.class);
+            intent.putExtra("idUser" , idUsuario);
             startActivity(intent);
         }else{
             mostrarDialog();
@@ -219,7 +220,6 @@ public class TimerActivity extends AppCompatActivity {
                 })
                 .show();
     }
-
     public void verSize(View view){
         Log.e("Lista", "" + lista.getTotal());
     }
