@@ -44,8 +44,8 @@ public class TimerActivity extends AppCompatActivity {
     private TextView timerTextView;
     private ImageView startButton;
     private CountDownTimer timer;
-    private final long startTimeInMillis = 2 * 60 * 1000;
-    private final long startTimeBreakInMillis = 1 * 60 * 1000;
+    private final long startTimeInMillis = 25 * 60 * 1000;
+    private final long startTimeBreakInMillis = 5 * 60 * 1000;
     private String idUsuario;
     private ListaUsuarios lista;
 private String nameSupreme ;
@@ -94,7 +94,6 @@ private String nameSupreme ;
                     lista = response.body();
                 }
             }
-
             @Override
             public void onFailure(Call<ListaUsuarios> call, Throwable t) {
 
@@ -135,7 +134,7 @@ private String nameSupreme ;
     private void restartCountdown() {
         // Cancela cualquier cronómetro anterior si existe
         TextView textText = findViewById(R.id.textUp);
-        textText.setText("Descanso 01:00");
+        textText.setText("Descanso 05:00");
         if (timer != null) {
             timer.cancel();
         }
