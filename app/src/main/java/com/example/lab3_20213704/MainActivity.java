@@ -65,6 +65,20 @@ public class MainActivity extends AppCompatActivity {
                 //Pasar a la vista timer
                 if(response.isSuccessful()){
                     Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+                    Usuario user = new Usuario();
+                    RespuestaAuth rpta = response.body();
+                    user.setUsername(rpta.getUsername());
+                    user.setEmail(rpta.getEmail());
+                    user.setIdUser(rpta.getId());
+                    user.setGender(rpta.getGender());
+                    user.setFirstName(rpta.getFirstName());
+                    user.setLastName(rpta.getLastName());
+                    intent.putExtra("username", user.getUsername());
+                    intent.putExtra("email", user.getEmail());
+                    intent.putExtra("idUser", user.getIdUser());
+                    intent.putExtra("gender", user.getGender());
+                    intent.putExtra("firstName", user.getFirstName());
+                    intent.putExtra("lastName", user.getLastName());
                     startActivity(intent);
                 }else{
                     showMaterialDialog();
