@@ -48,8 +48,7 @@ public class TimerActivity extends AppCompatActivity {
     private final long startTimeBreakInMillis = 5 * 60 * 1000;
     private String idUsuario;
     private ListaUsuarios lista;
-private String nameSupreme ;
-
+    private String nameSupreme ;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +114,9 @@ private String nameSupreme ;
         }
         startButton.setImageResource(R.drawable.restart_alt_24px);
         startButton.setOnClickListener(v -> restartCountdown());
+        //CHATGPT me recomendo usar la clase CountDownTimer para facilitar la lógica y el uso de los cronómetros
+        //Además esa clase trabaja internamente usando backGorundJobs por lo que no fue necerio configurarlo por mano propia y se cumplieron
+        //todo lo pedido en el laboratorio :D
         // Configura un nuevo cronómetro
         timer = new CountDownTimer(startTimeInMillis, 1000) {
             @Override
