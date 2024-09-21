@@ -68,7 +68,7 @@ private String nameSupreme ;
         String lastName  = intent.getStringExtra("lastName");
         String email  = intent.getStringExtra("email");
         idUsuario = "" +  idUser;
-        nameSupreme= name;
+        nameSupreme= firstName;
         TextView nameView = findViewById(R.id.name);
         nameView.setText(firstName + " " + lastName);
         TextView emailView = findViewById(R.id.email);
@@ -134,6 +134,8 @@ private String nameSupreme ;
     }
     private void restartCountdown() {
         // Cancela cualquier cronómetro anterior si existe
+        TextView textText = findViewById(R.id.textUp);
+        textText.setText("Descanso 01:00");
         if (timer != null) {
             timer.cancel();
         }
@@ -169,6 +171,8 @@ private String nameSupreme ;
     public void startBreak(){
         //Se muestra un aviso de que termino el tiempo
         //En caso haya tareas se redirige a otra vista
+        TextView textText = findViewById(R.id.textUp);
+        textText.setText("En descanso");
         if (timer != null) {
             timer.cancel();
         }
@@ -208,6 +212,9 @@ private String nameSupreme ;
         startButton.setClickable(true);
         startButton.setImageResource(R.drawable.restart_alt_24px);
         startButton.setOnClickListener(v -> restartCountdown());
+        TextView textText = findViewById(R.id.textUp);
+        textText.setText("Fin del descanso");
+
     }
     public void mostrarDialogFinBreak(){
         new MaterialAlertDialogBuilder(this)

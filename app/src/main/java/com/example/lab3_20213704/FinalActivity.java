@@ -92,7 +92,7 @@ public class FinalActivity extends AppCompatActivity {
                                 @Override
                                 public void onResponse(Call<AuxiliarTarea> call, Response<AuxiliarTarea> response) {
                                     if(response.isSuccessful()){
-                                        Toast.makeText(FinalActivity.this,"Estado: " ,Toast.LENGTH_LONG)
+                                        Toast.makeText(FinalActivity.this,"Cambio exitoso" ,Toast.LENGTH_LONG)
                                                 .show();
                                     }
                                 }
@@ -113,10 +113,7 @@ public class FinalActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
